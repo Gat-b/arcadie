@@ -12,8 +12,8 @@ st.markdown("""
 Pour coordonner les trajets, merci de remplir le Google Sheet selon votre mode de transport :
 """)
 
-col1, col2, col3 = st.columns([1, 2, 1])
-
+col1, col2, col3 = st.columns([1, 4, 1])
+GOOGLE_SHEET_COVOIT = st.secrets["GOOGLE_SHEET_COVOIT"]
 with col2:
     st.link_button("📋 Remplir le formulaire de covoiturage & train", GOOGLE_SHEET_COVOIT, use_container_width=True)
 
@@ -51,12 +51,12 @@ st.divider()
 st.subheader("🚗 En covoiturage")
 
 # Adresse et carte
-col1, col2 = st.columns([1, 1])
+col1, col2 = st.columns([1, 2])
 
 with col1:
     st.markdown("""
     ### 📍 Gîte de l'Orée du Bois
-    11 bis Rue du Château
+    11 bis Rue du Château \n
     28240 Manou
     """)
     st.link_button("📍 Voir sur Google Maps",

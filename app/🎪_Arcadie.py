@@ -1,15 +1,17 @@
 from utils import *
 
-# Affiche
-affiche = Image.open('data/affiche_arcadie.jpeg')
-st.image(affiche, use_container_width=False)
+# Titre principal
+st.set_page_config(layout="wide")
+st.title("🧚 Arcadie #3 🧚")
 
-st.set_page_config(
-    page_title="Arcadie #3",
-    page_icon="🎪",
-)
+col1, col2 = st.columns([2, 1])
 
-st.markdown("""# Amis farfadets, lutins et autres créatures des sous-bois,
+# ---------------------------------------------------------------------------
+# --- Description ---
+# ---------------------------------------------------------------------------
+
+col1.subheader("Amis farfadets, lutins et autres créatures des sous-bois,")
+col1.text("""
 
 L’heure est trouble, la lumière décline entre les feuillages… en cette nuit enchantée, nous vous ouvrons les portes du Cabaret des Farfadets 🧚
 
@@ -17,4 +19,11 @@ Après la Guinguette des Crevettes et le Bal des Étoiles, nous lançons une tro
 
 Cette conversation sera notre grimoire commun. Vous y trouverez toutes les informations pratiques et autres sortilèges utiles à notre quête : se retrouver et faire vibrer la forêt.
 
-On a super hâte ✨""")
+On a super hâte ✨
+""")
+
+# ---------------------------------------------------------------------------
+# Affiche
+# ---------------------------------------------------------------------------
+affiche = Image.open('data/affiche_arcadie.jpeg')
+col2.image(affiche, use_container_width=False)
