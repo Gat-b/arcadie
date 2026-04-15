@@ -29,4 +29,4 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 image_path = os.path.join(current_dir, 'data/affiche_arcadie.jpeg')
 
 affiche = Image.open(image_path)
-st.image(affiche, use_container_width=True)
+col2.image(affiche, use_container_width=True)
