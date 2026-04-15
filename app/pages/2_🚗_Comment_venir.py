@@ -2,7 +2,7 @@ from utils import *
 
 # Titre principal
 st.set_page_config(layout="wide")
-st.title("🚗 Comment venir ?")
+st.title("🚗 Comment venir ? 🚗")
 
 # ---------------------------------------------------------------------------
 # --- Google Sheet ---
