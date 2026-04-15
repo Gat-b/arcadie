@@ -12,7 +12,7 @@ st.title("🎉 Programmation du week-end 🎉")
 # --- Menu ---
 # ---------------------------------------------------------------------------
 
-st.subheader("🧑‍🍳 Menus")
+st.header("🧑‍🍳 Menus & Recettes")
 
 menu = pd.DataFrame({
     "": ["Matin", "Midi", "Soir"],
@@ -21,25 +21,27 @@ menu = pd.DataFrame({
     "Dimanche": ["Pancakes", "Restes", ""]
 })
 
-st.dataframe(
-    menu,
-    hide_index=True,
-    use_container_width=True,
-    column_config={
-        "": st.column_config.TextColumn(width="small"),
-        "Vendredi": st.column_config.TextColumn(width="medium"),
-        "Samedi": st.column_config.TextColumn(width="medium"),
-        "Dimanche": st.column_config.TextColumn(width="medium"),
-    }
-)
+st.dataframe(menu)
+
+# st.subheader("Vendredi Soir : Banh mi & Soupe miso", divider=True)
+
+# st.subheader("Samedi matin : Tartine de confiture et pâte à tartiner", divider=True)
+
+# st.subheader("Samedi midi : BBQ de légumes et taboulé", divider=True)
+
+# st.subheader("Samedi soir : Dahl de lentille épinard & riz", divider=True)
+
+# st.subheader("Dimanche matin : Pancakes", divider=True)
+
+# st.subheader("Dimanches midi : Restes + pâtes", divider=True)
+
+
 
 # ---------------------------------------------------------------------------
 # --- TBA ---
 # ---------------------------------------------------------------------------
 st.divider()
 
-col1, col2, col3 = st.columns([1, 3, 1])
+col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-    st.info("""
-    ### 🎁 D'autres surprises arrivent 🎁
-    """)
+    st.markdown("### 🎁 D'autres surprises arrivent 🎁", text_alignment="center")
