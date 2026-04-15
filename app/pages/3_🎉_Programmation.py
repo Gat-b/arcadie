@@ -38,7 +38,7 @@ st.dataframe(
 # ---------------------------------------------------------------------------
 st.divider()
 
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
     st.info("""
     ### 🎁 D'autres surprises arrivent 🎁

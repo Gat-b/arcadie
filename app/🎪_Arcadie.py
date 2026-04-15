@@ -30,3 +30,32 @@ image_path = os.path.join(current_dir, 'data/affiche_arcadie.jpeg')
 
 affiche = Image.open(image_path)
 col2.image(affiche, use_container_width=True)
+
+# ---------------------------------------------------------------------------
+# --- Timer avec refresh ---
+# ---------------------------------------------------------------------------
+st.divider()
+
+placeholder = st.empty()
+
+while True:
+    target_date = datetime(2025, 5, 29, 19, 0, 0)
+    now = datetime.now()
+
+    time_left = target_date - now
+    days = time_left.days
+    seconds_left = time_left.seconds
+    hours = seconds_left // 3600
+    minutes = (seconds_left % 3600) // 60
+    seconds = seconds_left % 60
+
+    with placeholder.container():
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("📅 Jours", f"{365 + days}")
+        col2.metric("⏱️ Heures", f"{hours:02d}")
+        col3.metric("⏲️ Minutes", f"{minutes:02d}")
+        col4.metric("⏳ Secondes", f"{seconds:02d}")
+
+    time.sleep(1)
+
+st.divider()
