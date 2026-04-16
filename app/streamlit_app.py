@@ -122,6 +122,7 @@ with navbar_container:
             ):
                 st.session_state.current_page = page_name
                 st.rerun()
+                st.stop()
 
 st.markdown("---")
 
@@ -130,11 +131,16 @@ st.markdown("---")
 # ===========================
 
 def load_page(page_path):
-    """Charge et exécute le fichier Python de la page"""
-    spec = importlib.util.spec_from_file_location("page_module", page_path)
-    page_module = importlib.util.module_from_spec(spec)
-    sys.modules["page_module"] = page_module
-    spec.loader.exec_module(page_module)
+    # Reset du DOM Streamlit
+    st.session_state["_page_loaded"] = False
+
+    if not st.session_state["_page_loaded"]:
+        st.session_state["_page_loaded"] = True
+
+        with open(page_path, "r", encoding="utf-8") as f:
+            code = f.read()
+
+        exec(code, globals())
 
 # Vérifier que le fichier existe et le charger
 page_file = PAGES.get(st.session_state.current_page)
