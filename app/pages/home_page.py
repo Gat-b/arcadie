@@ -1,13 +1,5 @@
 from utils import *
 
-# Titre principal
-st.set_page_config(
-    page_title="Arcadie",
-    page_icon="🧚",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
-
 # ===========================
 # BARRE DE NAVIGATION HORIZONTALE
 # ===========================
@@ -114,8 +106,6 @@ st.markdown("""
 # Initialiser la session pour tracker la page actuelle
 if "current_page" not in st.session_state:
     st.session_state.current_page = "🎪 Arcadie"
-
-st.title("🧚 Arcadie #3 🧚")
 
 # Créer la barre de navigation
 navbar_container = st.container()
