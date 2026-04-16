@@ -36,7 +36,7 @@ image_path = current_file.parent.parent / 'data' / 'affiche_arcadie.jpeg'
 affiche = Image.open(image_path)
 col2.image(affiche, use_container_width=True)
 
-# ---------------------------------------------------------------------------
+# --------------------------------------------------------------    -------------
 # --- Timer avec refresh ---
 # ---------------------------------------------------------------------------
 st.divider()
