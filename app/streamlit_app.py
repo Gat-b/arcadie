@@ -6,7 +6,7 @@ from utils import *
 
 # Définir les pages disponibles
 PAGES = {
-    "🎪 Arcadie": "pages/1_🎪_Arcadie.py",
+    "🎪 Arcadie": "app/pages/1_🎪_Arcadie.py",
     "🚗 Comment venir": "pages/4_🚗_Comment_venir.py",
     "🎉 Programmation": "pages/2_🎉_Programmation.py",
     "🎧 Line-up": "pages/3_🎧_Line-up.py"
