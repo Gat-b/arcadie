@@ -2,10 +2,10 @@ from utils import *
 
 # Liste des pages
 PAGES = {
-    "🎪 Arcadie": "app/pages/1_🎪_Arcadie.py",
-    "🎧 Line-up": "app/pages/2_🎧_Line-up.py",
-    "🚗 Comment venir": "app/pages/3_🚗_Comment_venir.py",
-    "🎉 Programmation": "app/pages/4_🎉_Programmation.py",
+    "🎪 Arcadie": "pages/1_🎪_Arcadie.py",
+    "🎧 Line-up": "pages/2_🎧_Line-up.py",
+    "🚗 Comment venir": "pages/3_🚗_Comment_venir.py",
+    "🎉 Programmation": "pages/4_🎉_Programmation.py",
 }
 
 # NAVBAR FIXE
@@ -18,7 +18,7 @@ for i, (name, path) in enumerate(PAGES.items()):
 
 st.markdown("---")
 
-# Navigation native Streamlit (IMPORTANT)
+# Navigation native Streamlit
 pg = st.navigation([
     st.Page(p) for p in PAGES.values()
 ])
