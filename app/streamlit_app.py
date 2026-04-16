@@ -7,9 +7,9 @@ from utils import *
 # Définir les pages disponibles
 PAGES = {
     "🎪 Arcadie": "app/pages/1_🎪_Arcadie.py",
-    "🚗 Comment venir": "pages/4_🚗_Comment_venir.py",
-    "🎉 Programmation": "pages/2_🎉_Programmation.py",
-    "🎧 Line-up": "pages/3_🎧_Line-up.py"
+    "🚗 Comment venir": "app/pages/4_🚗_Comment_venir.py",
+    "🎉 Programmation": "app/pages/2_🎉_Programmation.py",
+    "🎧 Line-up": "app/pages/3_🎧_Line-up.py"
 }
 
 # CSS pour la barre de navigation horizontale scrollable
