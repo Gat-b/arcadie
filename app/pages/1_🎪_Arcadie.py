@@ -1,7 +1,12 @@
 from utils import *
 
 # Titre principal
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="Arcadie",
+    page_icon="🧚",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 st.title("🧚 Arcadie #3 🧚")
 
 col1, col2 = st.columns([2, 1])
@@ -25,8 +30,8 @@ On a super hâte ✨
 # ---------------------------------------------------------------------------
 # Affiche
 # ---------------------------------------------------------------------------
-current_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(current_dir, 'data/affiche_arcadie.jpeg')
+current_file = Path(__file__)
+image_path = current_file.parent.parent / 'data' / 'affiche_arcadie.jpeg'
 
 affiche = Image.open(image_path)
 col2.image(affiche, use_container_width=True)
