@@ -64,10 +64,10 @@ st.link_button("📍 Voir sur Google Maps",
                 use_container_width=True)
 
 
-gite_adresse = pd.DataFrame({
-    'latitude': [48.52193898339119],
-    'longitude': [0.9811073892840328]
-})
-st.map(gite_adresse, zoom=12)
+# gite_adresse = pd.DataFrame({
+#     'latitude': [48.52193898339119],
+#     'longitude': [0.9811073892840328]
+# })
+# st.map(gite_adresse, zoom=12)
 
-st.divider()
+# st.divider()
