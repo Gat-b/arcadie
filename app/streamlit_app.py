@@ -6,6 +6,7 @@ PAGES = {
     "🎧 Line-up": "pages/2_🎧_Line-up.py",
     "🚗 Comment venir": "pages/3_🚗_Comment_venir.py",
     "🎉 Programmation": "pages/4_🎉_Programmation.py",
+    #"Qui est-ce": "pages/5_Qui_est_ce.py"
 }
 
 # NAVBAR FIXE
