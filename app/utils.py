@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit_card import card
+from streamlit_gsheets import GSheetsConnection
+
 
 import pandas as pd
 import numpy as np
