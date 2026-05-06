@@ -1,40 +1,61 @@
 from utils import *
 
 # ---------------------------------------------------------------------------
-# --- Titre principal ---
-# ---------------------------------------------------------------------------
-
-st.set_page_config(layout="wide")
-st.title("🎉 Programmation du week-end 🎉")
-
-
-# ---------------------------------------------------------------------------
 # --- Menu ---
 # ---------------------------------------------------------------------------
 
-# st.header("🧑‍🍳 Menus & Recettes")
+st.markdown("<h1 style='text-align: center;'>🍽️ Menus du week-end 🍽️</h1>", unsafe_allow_html=True)
 
-# menu = pd.DataFrame({
-#     "": ["Matin", "Midi", "Soir"],
-#     "Vendredi": ["", "", "Banh mi et soupe miso"],
-#     "Samedi": ["Confiture et pâte à tartiner", "BBQ et taboulé", "Dahl de lentille épinard & riz"],
-#     "Dimanche": ["Pancakes", "Restes", ""]
-# })
+st.markdown("""
+    <h2 style='text-align: left;'>Vendredi soir </h2>
+    <h3 style='text-align: left;'>🌴 La forêt enchantée devient tropicale 🌴</h3>
+    <div style='text-align: left;'>
 
-# st.dataframe(menu)
+    **Banh mi végétariens** croustillants garnis de légumes pickles et tofu caramélisé
 
-# st.subheader("Vendredi Soir : Banh mi & Soupe miso", divider=True)
+    **Bouillon clair** parfumé gingembre et menthe
+    </div>
+    """, unsafe_allow_html=True)
 
-# st.subheader("Samedi matin : Tartine de confiture et pâte à tartiner", divider=True)
+st.markdown("""
+    <h2 style='text-align: right;'>Samedi midi </h2>
+    <h3 style='text-align: right;'>🌲 Détour dans les forêts de cèdres du Levant 🌲</h3>
+    <div style='text-align: right;'>
 
-# st.subheader("Samedi midi : BBQ de légumes et taboulé", divider=True)
+    **Taboulé printanier** gorgé de persil et de menthe
 
-# st.subheader("Samedi soir : Dahl de lentille épinard & riz", divider=True)
+    **Brochettes de légumes grillés** au feu
+    </div>
+    """, unsafe_allow_html=True)
 
-# st.subheader("Dimanche matin : Pancakes", divider=True)
+st.markdown("""
+    <h2 style='text-align: left;'>Samedi soir </h2>
+    <h3 style='text-align: left;'>🐊 Passage dans les mangroves du Kerala 🐊</h3>
+    <div style='text-align: left;'>
 
-# st.subheader("Dimanches midi : Restes + pâtes", divider=True)
+    **Grand dahl** aux lentilles corail et épinards
 
+    Servi avec du **riz**
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("""
+    <h2 style='text-align: right;'>Dimanche midi</h2>
+    <h3 style='text-align: right;'>🍃 Ramassage de feuilles 🍃</h3>
+    <div style='text-align: right;'>
+
+    Pancakes, restes et litres de café
+    </div>
+    """, unsafe_allow_html=True)
+
+
+
+# current_file = Path(__file__)
+# image_path = current_file.parent.parent / 'data' / 'menus.jpeg'
+
+
+# affiche = Image.open(image_path)
+# st.image(affiche, use_container_width=True)
 
 
 # ---------------------------------------------------------------------------
