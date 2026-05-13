@@ -57,12 +57,46 @@ st.markdown("""
 # affiche = Image.open(image_path)
 # st.image(affiche, use_container_width=True)
 
-
 # ---------------------------------------------------------------------------
-# --- TBA ---
+# --- Programme du samedi ---
 # ---------------------------------------------------------------------------
 st.divider()
+st.markdown("<h1 style='text-align: center;'>☀️ Programme du samedi ☀️</h1>", unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([1, 1, 1])
-with col2:
-    st.markdown("### 🎁 Les surprises arrivent soon 🎁", text_alignment="center")
+col1, col2 = st.columns(2)
+
+activites = [
+    "🎯 Pétanque",
+    "🎳 Molki",
+    "🏐 Spike ball",
+    "🏊 Piscine",
+    "🎵 Music live",
+    "🪕 Bal folk",
+    "🎹 Atelier MAO",
+    "🗺️ Chasse au trésor",
+    "✨ Stand paillette",
+    "👨‍🍳 Cuisine collaborative",
+    "🎲 Jeux de sociétés",
+    "🎉 Et tout ce que vous allez ramener !"
+]
+
+# Split activités en deux listes
+mid = len(activites) // 2
+col1_activites = activites[:mid]
+col2_activites = activites[mid:]
+
+
+for activite in col1_activites:
+    col1.markdown(f"<p style='font-size: 20px;'>{activite}</p>", unsafe_allow_html=True)
+
+
+for activite in col2_activites:
+    col2.markdown(f"<p style='font-size: 20px;'>{activite}</p>", unsafe_allow_html=True)
+
+### Image : etoiles
+
+current_file = Path(__file__)
+etoiles_path = current_file.parent.parent / 'data' / 'etoiles.jpeg'
+
+etoiles = Image.open(etoiles_path)
+st.image(etoiles, use_container_width=True)

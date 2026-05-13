@@ -64,11 +64,49 @@ st.link_button("📍 Voir sur Google Maps",
                 "https://maps.google.com/?q=48.52193898339119,0.9811073892840328",
                 use_container_width=True)
 
+st.divider()
+st.divider()
 
-# gite_adresse = pd.DataFrame({
-#     'latitude': [48.52193898339119],
-#     'longitude': [0.9811073892840328]
-# })
-# st.map(gite_adresse, zoom=12)
+# ---------------------------------------------------------------------------
+# --- Dans ma valise ---
+# ---------------------------------------------------------------------------
+st.markdown("""<h1 style='text-align: center;'>🧳 Dans ma valise, il y a... 🧳</h1>""",
+            unsafe_allow_html=True)
 
-# st.divider()
+col1, col2 = st.columns(2)
+
+valise = [
+    "🎒 Un sac de couchage",
+    "🔇 Des boules quies",
+    "🪥 Une brosse à dent",
+    "🧴 Un gel douche et un dentifrice",
+    "🛁 Une serviette",
+    "🌧️ Un k-way",
+    "🧶 Un gros pull",
+    "🏊 Un maillot de bain",
+    "✨ Mon apparât de farfadet",
+    "🎸 Mon tosma",
+    "🍬 Mes chewing-gum",
+    "🍻 Ma tease (hors bière et vin)",
+    "😄 Ma bonne humeur"
+]
+
+# Split valise en deux listes
+mid = len(valise) // 2
+col1_valise = valise[:mid]
+col2_valise = valise[mid:]
+
+for item in col1_valise:
+    col1.markdown(f"<p style='font-size: 20px;'>{item}</p>", unsafe_allow_html=True)
+
+
+for item in col2_valise:
+    col2.markdown(f"<p style='font-size: 20px;'>{item}</p>", unsafe_allow_html=True)
+
+
+# Image après
+current_file = Path(__file__)
+aprem_path = current_file.parent.parent / 'data' / 'aprem.jpeg'
+
+aprem = Image.open(aprem_path)
+st.image(aprem)
