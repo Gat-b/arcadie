@@ -7,20 +7,21 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-st.title("🧚 Arcadie #3 🧚")
+st.title("🧚 Arcadie #3 : Le cabaret des farfadets 🧚")
 
-col1, col2 = st.columns([2, 1])
+
 
 # ---------------------------------------------------------------------------
 # --- Description ---
 # ---------------------------------------------------------------------------
+col1, col2 = st.columns([2, 1])
 
 col1.subheader("Amis farfadets, lutins et autres créatures des sous-bois,")
 col1.text("""
 
 L’heure est trouble, la lumière décline entre les feuillages… en cette nuit enchantée, nous vous ouvrons les portes du Cabaret des Farfadets 🧚
 
-Après la Guinguette des Crevettes et le Bal des Étoiles, nous lançons une troisième incantation. Dans 47 jours, elle nous emportera loin du monde ordinaire, vers un refuge caché, là où la mousse est douce, les basses résonnent entre les arbres et les racines s’entrelacent 🌳
+Après la Guinguette des Crevettes et le Bal des Étoiles, nous lançons une troisième incantation qui nous emportera loin du monde ordinaire, vers un refuge caché, là où la mousse est douce, les basses résonnent entre les arbres et les racines s’entrelacent 🌳
 
 Cette conversation sera notre grimoire commun. Vous y trouverez toutes les informations pratiques et autres sortilèges utiles à notre quête : se retrouver et faire vibrer la forêt.
 
@@ -28,7 +29,7 @@ On a super hâte ✨
 """)
 
 # ---------------------------------------------------------------------------
-# Affiche
+# -- Affiche ---
 # ---------------------------------------------------------------------------
 current_file = Path(__file__)
 image_path = current_file.parent.parent / 'data' / 'affiche_arcadie.jpeg'
@@ -55,11 +56,10 @@ while True:
     seconds = seconds_left % 60
 
     with placeholder.container():
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3 = st.columns(3)
         col1.metric("📅 Jours", f"{365 + days}")
         col2.metric("⏱️ Heures", f"{hours:02d}")
         col3.metric("⏲️ Minutes", f"{minutes:02d}")
-        col4.metric("⏳ Secondes", f"{seconds:02d}")
 
     time.sleep(1)
 

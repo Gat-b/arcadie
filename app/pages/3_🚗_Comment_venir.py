@@ -2,7 +2,8 @@ from utils import *
 
 # Titre principal
 st.set_page_config(layout="wide")
-st.title("🚗 Comment venir ? 🚗")
+st.markdown("""<h1 style='text-align: center;'>🚗 Comment venir ? 🚗</h1>""",
+            unsafe_allow_html=True)
 
 # ---------------------------------------------------------------------------
 # --- Google Sheet ---

@@ -44,7 +44,7 @@ st.markdown("""
     <h3 style='text-align: right;'>🍃 Ramassage de feuilles 🍃</h3>
     <div style='text-align: right;'>
 
-    Pancakes, restes et litres de café
+    **Pancakes**, restes et litres de café
     </div>
     """, unsafe_allow_html=True)
 
